@@ -1,0 +1,15 @@
+{
+  "maxDebugAttempts": 5,
+  "maxReviewRevisionAttempts": 2,
+  "protectedBranches": ["main", "master"],
+  "requireApprovalBefore": {
+    "startingAnIssue": true,
+    "commitAndPush": true,
+    "pullRequest": true,
+    "deployment": true
+  },
+  "issueDiscoveryLabels": ["bug"],
+  "defaultBranch": "main",
+  "stateDir": ".claude/workflow/state",
+  "logDir": ".claude/workflow/logs"
+}
