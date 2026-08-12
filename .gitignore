@@ -1,0 +1,9 @@
+# Claude Code /workflow runtime artifacts (local run state/logs, not project content)
+.claude/workflow/state/
+.claude/workflow/logs/
+
+# Personal Claude Code permission allowlist (machine-local, not project content)
+.claude/settings.local.json
+
+# Stray nested git clone of this repo
+Protfolio/
