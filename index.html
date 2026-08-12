@@ -622,7 +622,7 @@ function initCarousel() {
   dotsEl.innerHTML = '';
   for (var i = 0; i < total; i++) {
     var d = document.createElement('button');
-    d.className = 'car-dot' + (i === 0 ? ' active' : '');
+    d.className = 'car-dot' + (i === 0 ? ' active' : ');
     d.dataset.i = i;
     d.onclick = function() { goToSlide(parseInt(this.dataset.i)); };
     dotsEl.appendChild(d);
@@ -644,6 +644,18 @@ function updateCarousel() {
   });
 }
 function revealAll() {
+  // Add event listener to navigation links to close mobile menu
+  var navLinks = document.querySelectorAll('nav a');
+  navLinks.forEach(function(link) {
+    link.addEventListener('click', function() {
+      var mobileMenu = document.getElementById('mobile-menu');
+      if (mobileMenu.classList.contains('open')) {
+        mobileMenu.classList.remove('open');
+      }
+    });
+  });
+}
+</script>
   document.querySelectorAll('.reveal').forEach(function(el) {
     if (el.getBoundingClientRect().top < window.innerHeight - 60) el.classList.add('visible');
   });
